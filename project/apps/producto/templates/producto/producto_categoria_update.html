@@ -1,15 +1,17 @@
 {% extends 'producto/index.html' %}
 
-{% block contenido_de_producto %}
+{% block content %}
     <div class="container">
-        <h2>Crear Categorias de Productos</h2>
+        <h2>Actualizar Categorias de Productos</h2>
 
         <form method="post">
             {% csrf_token %}
             {{form.as_p}}
-            <button type="submit">Crear</button>
+            <button type="submit">Guardar cambios</button>
         </form>
         <br>
         <a href="{% url 'producto:index' %}" class="btn btn-secondary" >Volver a Indice de Producto</a>
-    </div>
-{% endblock contenido_de_producto %}
+
+        <div class="container">
+
+{% endblock content %}

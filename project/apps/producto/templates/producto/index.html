@@ -2,14 +2,14 @@
 
 {% block content %}
 
-    <h1>PRODUCTOS</h1>
     <div class="container">
-        {% block contenido_de_producto %}
-            <h3>Categorias de Productos</h3>
-
-            <a href="{% url 'producto:producto_categoria_create' %}">Crear</a><br>
-            <a href="{% url 'producto:producto_categoria_list' %}">Listar</a><br>
-
-        {% endblock contenido_de_producto %}
+        <h1>PRODUCTOS</h1>
+            {% block contenido_de_producto %}
+                <h3>Categorias de Productos</h3>
+                <div style="display: inline-block;">
+                    <a href="{% url 'producto:producto_categoria_create' %} " class="btn btn-secondary">Crear</a>
+                    <a href="{% url 'producto:producto_categoria_list' %}" class="btn btn-secondary">Listar</a>
+                </div> 
+            {% endblock contenido_de_producto %}
     </div>
 {% endblock content %}
