@@ -1,6 +1,7 @@
-from . import forms
 from django.http import HttpResponse
 from django.shortcuts import redirect, render
+
+from . import forms
 
 
 # Create your views here.

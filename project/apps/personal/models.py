@@ -17,4 +17,4 @@ class Personal(models.Model):
     sector = models.ForeignKey(Sector, on_delete=models.SET_NULL, null=True)
 
     def __str__(self) -> str:
-        return self.nombre
+        return self.nombre, self.apellido

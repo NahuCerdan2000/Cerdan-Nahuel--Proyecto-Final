@@ -1,7 +1,15 @@
 {% extends 'home/base.html' %}
 
 {% block content %}
+
     <h1>PRODUCTOS</h1>
-    <a href="{% url 'home:index' %}">HOME</a>
-    <a href="{% url 'venta:index' %}">VENTA</a>
+    <div class="container">
+        {% block contenido_de_producto %}
+            <h3>Categorias de Productos</h3>
+
+            <a href="{% url 'producto:producto_categoria_create' %}">Crear</a><br>
+            <a href="{% url 'producto:producto_categoria_list' %}">Listar</a><br>
+
+        {% endblock contenido_de_producto %}
+    </div>
 {% endblock content %}

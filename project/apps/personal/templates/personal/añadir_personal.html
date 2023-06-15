@@ -2,11 +2,11 @@
 
 {% block content %}
     <h1>PERSONAL</h1>
-    <h2>Login</h2>
+    <h2>Añadir un Nuevo Personal</h2>
 
     <form action="" method="post">
         {% csrf_token %}
         {{ form.as_p }}
-        <input type="submit" value="Acceder">
+        <input type="submit" value="Añadir un Nuevo Personal">
     </form>
 {% endblock content %}
