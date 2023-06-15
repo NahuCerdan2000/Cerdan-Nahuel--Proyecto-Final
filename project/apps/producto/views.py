@@ -4,6 +4,7 @@ from django.template import context
 from django.urls import reverse_lazy
 from django.views.generic import DetailView, ListView
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 from . import forms, models
 
@@ -19,7 +20,7 @@ class ProductoCategoriaList(ListView):
     context_object_name = "categorias"
 
 
-class ProductoCategoriaCreate(CreateView):
+class ProductoCategoriaCreate(LoginRequiredMixin, CreateView):
     model = models.ProductoCategoria
     form_class = forms.ProductoCategoriaForm
     template_name = "producto/producto_categoria_create.html"

@@ -1,14 +1,14 @@
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
-from django.http import HttpResponse
-from django.shortcuts import render
+from django.http import HttpRequest, HttpResponse
+from django.shortcuts import redirect, render
 
 from . import forms
 
 
 # Create your views here.
 def index(request: HttpResponse) -> HttpResponse:
-    return render(request, "home/index.html")
+    return render(request, "home/index.html")  # type: ignore
 
 
 def login_request(request):
