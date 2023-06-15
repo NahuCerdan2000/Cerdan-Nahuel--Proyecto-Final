@@ -1,0 +1,16 @@
+{% extends 'home/base.html' %}
+
+{% block content %}
+    <div class="container">
+        <h1>PERSONAL</h1>
+        <h2>Añadir un Nuevo Personal</h2>
+
+        <form action="" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Añadir un Nuevo Personal">
+        </form>
+        <br>
+        <a href="{% url 'personal:index' %}" class="btn btn-secondary" >Volver a Login de Personal</a>
+    </div>
+    {% endblock content %}

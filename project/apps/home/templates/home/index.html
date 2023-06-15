@@ -2,10 +2,21 @@
 {% load static %}
 
 {% block content %}
+
+{% if user.is_autenticated %}
+    <p>{{mensaje}}</p>
+{% endif %}
+
+
+{% if user.is_staff %}
+    <p><a href="{% url 'admin:index' %}" class="btn btn-secondary">Administracion</a> 
+    <a href="{% url 'home:register' %}" class="btn btn-secondary">Registrar Nuevo Empleado</a></p>
+{% endif %}
+
 <!-- Page Content-->
 <div class="container px-4 px-lg-5">
+    
     <!-- Heading Row-->
-
     <div class="row gx-4 gx-lg-5 align-items-center my-5">
         <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" src="{% static 'home/image/SYE.jpg' %}" alt="..." /></div>
         <div class="col-lg-5">

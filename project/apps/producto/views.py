@@ -2,7 +2,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import redirect, render
 from django.template import context
 from django.urls import reverse_lazy
-from django.views.generic import ListView
+from django.views.generic import DetailView, ListView
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
 
 from . import forms, models
@@ -37,6 +37,11 @@ class ProductoCategoriaUpdate(UpdateView):
     form_class = forms.ProductoCategoriaForm
     template_name = "producto/producto_categoria_update.html"
     success_url = reverse_lazy("producto:index")
+
+
+class ProductoCategoriaDetail(DetailView):
+    model = models.ProductoCategoria
+    template_name = "producto/producto_categoria_detail.html"
 
 
 #

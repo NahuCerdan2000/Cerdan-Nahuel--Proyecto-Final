@@ -1,12 +1,17 @@
 {% extends 'home/base.html' %}
 
 {% block content %}
-    <h1>PERSONAL</h1>
-    <h2>Login</h2>
+    <div class="container">
+        <h1>PERSONAL</h1>
+        <h2>Login</h2>
 
-    <form action="" method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <input type="submit" value="Acceder">
-    </form>
+        <form action="" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Acceder">
+        </form>
+        <br>
+        <a href="{% url 'personal:personal_create' %}" class="btn btn-secondary" >Registrar Nuevo Empleado</a>
+        <a href="{% url 'personal:personal_list' %}" class="btn btn-secondary">Listar Empleados</a>
+    </div>
 {% endblock content %}

@@ -7,6 +7,7 @@
         <ul>
            <li>
             {{categoria}}
+            <a href="{% url 'producto:producto_categoria_detail' categoria.id %}" class="btn btn-secondary">Ver Detalle</a>
             <a href="{% url 'producto:producto_categoria_update' categoria.id %}" class="btn btn-primary">Actualizar</a>
             <a href="{% url 'producto:producto_categoria_delete' categoria.id %}" class="btn btn-danger">Eliminar</a>
            </li> 

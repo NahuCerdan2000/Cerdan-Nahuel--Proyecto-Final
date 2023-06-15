@@ -1,0 +1,17 @@
+{% extends 'personal/index.html' %}
+
+{% block content %}
+    <div class="container">
+        <h2>Actualizar Personal</h2>
+
+        <form method="post">
+            {% csrf_token %}
+            {{form.as_p}}
+            <button type="submit">Guardar cambios</button>
+        </form>
+        <br>
+        <a href="{% url 'personal:index' %}" class="btn btn-secondary" >Login de Personal</a>
+
+        <div class="container">
+
+{% endblock content %}

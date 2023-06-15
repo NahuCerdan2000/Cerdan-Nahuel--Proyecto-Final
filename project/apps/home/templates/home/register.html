@@ -1,0 +1,15 @@
+{% extends 'home/base.html' %}
+
+{% block content %}
+    <div class="container">
+        <h2>Registro de nuevo usuario</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{form.as_p}}
+            <div class="d-grid gap-1">
+                <button type="submit" class="btn btn-primary">Registrar Nuevo Usuario</button>
+            </div>
+            
+        </form>
+    </div>
+{% endblock content %}
