@@ -59,6 +59,7 @@ INSTALLED_APPS += [
     "producto",
     "venta",
     "home",
+    "personal",
 ]
 
 
