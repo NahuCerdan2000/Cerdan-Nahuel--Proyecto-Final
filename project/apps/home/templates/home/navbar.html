@@ -9,13 +9,17 @@
                 <li class="nav-item"><a class="nav-link active" aria-current="page" href="{% url 'home:index' %}">Inicio</a></li>
                 
                 {% if user.is_authenticated %}
-
+                <li class="nav-item"><a class="nav-link" href="{% url 'home:login' %}">Personal</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'producto:index' %}">Productos</a></li>
                 <li class="nav-item"><a class="nav-link" href="{% url 'venta:index' %}">Venta</a></li>
-                
+                <li class="nav-item"><a class="nav-link text-info" href="{% url 'home:logout' %}">Logout</a></li>
+                <li class="nav-item"><a class="nav-link" >{{ user.username }}</a></li>
                 {% else %}
+                    <li class="nav-item"><a class="nav-link" href="{% url 'home:about' %}">¿Quiénes somos?</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'producto:index' %}">Productos</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'home:login' %}">Personal</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#!">Contactanos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://wa.me/5491124701222">Contactanos</a></li>
+                    <li class="nav-item"><a class="nav-link" >{{ user.username }}</a></li>
 
                 {% endif %}
             </ul>
