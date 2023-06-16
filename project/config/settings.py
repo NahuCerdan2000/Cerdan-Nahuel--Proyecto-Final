@@ -55,12 +55,7 @@ INSTALLED_APPS = [
 
 # * Apps propias
 
-INSTALLED_APPS += [
-    "producto",
-    "venta",
-    "home",
-    "personal",
-]
+INSTALLED_APPS += ["producto", "venta", "home", "personal"]
 
 
 MIDDLEWARE = [
