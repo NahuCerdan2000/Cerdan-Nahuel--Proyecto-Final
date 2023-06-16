@@ -16,3 +16,6 @@ Mi proyecto final consiste en crearle una pagina para la empresa en la cual esto
 # Ventas (Es la ultima aplicacion desarollada)
     Aun esta en proceso de desarrollo por falta de tiempo...
 
+*anotacion extra*
+Hay una 4ta aplicacion que no va pero al borrarla el programa no funciona asique la deje ahi 😅
+
