@@ -14,7 +14,7 @@ from . import forms, models
 
 
 def index(request: HttpResponse) -> HttpResponse:
-    return render(request, "producto/index.html")
+    return render(request, "producto/index.html")  # type: ignore
 
 
 class ProductoCategoriaList(ListView):
