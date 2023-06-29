@@ -124,7 +124,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = "es"
 
-TIME_ZONE = "UTC"
+TIME_ZONE = "America/Argentina/Mendoza"
 
 USE_I18N = True
 
@@ -144,5 +144,10 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 
 # ! LOGIN
+from django.urls import reverse_lazy
 
-LOGIN_URL = "home:login"
+LOGIN_URL = reverse_lazy("home:login")
+LOGIN_REDIRECT_URL = reverse_lazy("home:index")
+
+# ! MEDIA
+MEDIA_URL = "/media/"

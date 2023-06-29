@@ -1,0 +1,25 @@
+{% extends 'producto/index.html' %}
+
+{% block title %}
+    Detalle de Productos
+{% endblock title %}
+
+{% block content_producto %}
+    <ul>
+        <li>Categoría: {{ object.categoria }}</li>
+        <li>Nombre: {{ object.nombre }}</li>
+        <li>Unidad de medida: {{ object.unidad_de_medida }}</li>
+        <li>Cantidad: {{ object.cantidad }}</li>
+        <li>Precio: {{ object.precio }}</li>
+        <li>Descripción: {{ object.descripcion }}</li>
+        <li>Fecha de actualización: {{ object.fecha_actualizacion }}</li>
+    </ul>
+
+    {% url 'producto:index' as url %}
+    
+    <div class="d-grid gap-3">
+        <a href="{% url 'producto:producto_list' %}" class="btn btn-info">Ir a Listado de Productos</a>
+        <br>
+    </div>
+
+{% endblock content_producto %}
