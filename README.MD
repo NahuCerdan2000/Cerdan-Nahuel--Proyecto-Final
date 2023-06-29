@@ -14,8 +14,11 @@ Mi proyecto final consiste en crearle una pagina para la empresa en la cual esto
     Tambien en esta app esta desarrollado todo el Bootstrap de la pagina.
 
 # Ventas (Es la ultima aplicacion desarollada)
-    Aun esta en proceso de desarrollo por falta de tiempo...
+    Aun esta en proceso de desarrollo...
 
 *anotacion extra*
 Hay una 4ta aplicacion llamada "personal" que no va pero al borrarla el programa no funciona asique la deje ahi 😅
+
+Tengo problemas con la implementacion de avatares, no se ven en la pagina web. Creo que gran parte de este problema viene a raiz de que en models de ventas no puedo importar el "self.user.username" en la funcion __str__ y no encuentro el porque
+
 

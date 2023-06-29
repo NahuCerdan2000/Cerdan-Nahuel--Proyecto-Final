@@ -35,4 +35,4 @@ class Meta:
 
 
 def __str__(self):
-    return f"{self.usuario}"
+    return f"{self.user.username}"
