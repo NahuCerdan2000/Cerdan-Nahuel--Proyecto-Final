@@ -21,4 +21,9 @@ Hay una 4ta aplicacion llamada "personal" que no va pero al borrarla el programa
 
 Tengo problemas con la implementacion de avatares, no se ven en la pagina web. Creo que gran parte de este problema viene a raiz de que en models de ventas no puedo importar el "self.user.username" en la funcion __str__ y no encuentro el porque
 
+Usuarios de Staff:
+usuario: admin 
+contraseña: 1234
 
+usuario: nahuel
+contraseña:mc18127571
